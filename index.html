@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic FM</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src/assets/styles/reset.css">
+    <link rel="stylesheet" href="./src/assets/styles/vars.css">
+    <link rel="stylesheet" href="./src/assets/styles/sidebar-footer.css">
+    <link rel="stylesheet" href="./src/assets/styles/main-content.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -13,7 +15,7 @@
         <nav class="sidebar_navegation">
             <div class="logo">
                 <a href="#">
-                    <img src="./assets/magiclogo.png" alt="Logo do Magic FM">
+                    <img src="./src/assets/icons/magiclogo.png" alt="Logo do Magic FM">
                 </a>
             </div>
             <ul>
@@ -68,6 +70,41 @@
             </div>
         </div>
     </div>
+
+    <main>
+        <div class="main-container">
+            <nav class="header_navigation">
+                <div class="navigation">
+                    <button class="arrow-left">
+                        <img src="./src/assets/icons/small-left.png" alt="Seta para voltar">
+                    </button>
+                    <button class="arrow-right">
+                        <img src="./src/assets/icons/small-right.png" alt="Seta para avançar">
+                    </button>
+                    <form class="search-form" action="#" method="GET">
+                        <label for="search" class="visually-hidden">Pesquisar</label>
+                        <div class="head_search">
+                            <img src="./src/assets/icons/search.png" alt="Ícone de pesquisa">
+                            <input id="search" class="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?" name="q">
+                        </div>
+                    </form>
+                </div>
+                <div class="header_login">
+                    <button class="subscribe">Inscreva-se</button>
+                    <button class="login">Entrar</button>
+                </div>
+            </nav>
+            <div class="playlist-container">
+                <div id="result-playlists">
+                    <div class="playlist">
+                        <h1 id="greeting">Bem-vindos</h1>
+                        <h2 class="greeting-subtitle">Para onde nós vamos:</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer class="disclaimer-premium">
         <div class="text">
             <p class="disclaimer-premium_title"> Teste a versão paga por 7 dias</p>
