@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./src/assets/styles/sidebar-footer.css">
     <link rel="stylesheet" href="./src/assets/styles/main-content.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./src/assets/styles/media-queries.css">
 </head>
 <body>
     <div class="sidebar">
@@ -81,13 +82,10 @@
                     <button class="arrow-right">
                         <img src="./src/assets/icons/small-right.png" alt="Seta para avançar">
                     </button>
-                    <form class="search-form" action="#" method="GET">
-                        <label for="search" class="visually-hidden">Pesquisar</label>
-                        <div class="head_search">
-                            <img src="./src/assets/icons/search.png" alt="Ícone de pesquisa">
-                            <input id="search" class="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?" name="q">
-                        </div>
-                    </form>
+                    <div class="head_search">
+                        <img src="./src/assets/icons/search.png" alt="" />
+                        <input id="search-input" maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="O que você quer ouvir?" value="" />
+                    </div>
                 </div>
                 <div class="header_login">
                     <button class="subscribe">Inscreva-se</button>
@@ -99,6 +97,83 @@
                     <div class="playlist">
                         <h1 id="greeting">Bem-vindos</h1>
                         <h2 class="greeting-subtitle">Para onde nós vamos:</h2>
+                    </div>
+                </div>
+                <div class="offer_scroll-container">
+                    <div class="offer_list">
+                        <section class="offer_list-item">
+                            <a href="" class="cards">
+                                <div class="cards card1">
+                                    <img src="./src/quadros/POP.png" alt="" />
+                                    <span>POP Music</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card2">
+                                    <img src="./src/quadros/EDM.png" alt="" />
+                                    <span>Eletro Dance Music</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card3">
+                                    <img src="./src/quadros/HIPHOP.png" alt="" />
+                                    <span>HIP-HOP</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card4">
+                                    <img src="./src/quadros/ROCK.png" alt="" />
+                                    <span>Rock</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card5">
+                                    <img src="./src/quadros/INDIE.png" alt="" />
+                                    <span>Indie/Alternative</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card6">
+                                    <img src="./src/quadros/BRASIL.png" alt="" />
+                                    <span>Brasil</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card7">
+                                    <img src="./src/quadros/SERT.png" alt="" />
+                                    <span>Sertanejo</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card8">
+                                    <img src="./src/quadros/MPB.png" alt="" />
+                                    <span>Música Popular Brasileira</span>
+                                </div>
+                            </a>
+                            <a href="" class="cards">
+                                <div class="cards card9">
+                                    <img src="./src/quadros/FUNK.png" alt="" />
+                                    <span>Funk</span>
+                                </div>
+                            </a>
+                        </section>    
+                    </div>
+            </div>
+        </div>
+        <div id="result-artist" class="hidden">
+            <div class="grid-container">
+                <div class="artist-card" id="">
+                    <div class="card-img">
+                        <img id="artist-img" class="artist-img" />
+                        <div class="play">
+                            <span class="fa fa-solid fa-play"></span>
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        <a title="Foo Fighters" class="vst" href="">
+                        <span class="artist-name" id="artist-name"></span>
+                        <span class="artist-categorie">Artista</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -116,5 +191,6 @@
             <a href="#" class="disclaimer-button">Faça o cadastro aqui</a>
         </div>
     </footer>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

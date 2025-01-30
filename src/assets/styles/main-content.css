@@ -52,63 +52,37 @@
 }
 
 .head_search {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px;
-    width: 100%;
-    max-width: none;
-    background: transparent;
+   display: flex;
+   align-items: center;
+   width: 600px;
+   height: 48px;
+   margin-left: 8px;
+   background-color: #242424;
+   border-radius: 500px;
+   border: 1px solid transparent;
 }
 
 .head_search img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+   width: 16px;
+   height: 16px;
+   margin-left: 10px;
+   margin-right: 8px;
 }
 
-.search-input {
-    border: none;
-    outline: none;
-    flex: 1;
-    font-size: 16px;
-    background: none;
-    color: #fff;
+#search-input {
+   display: flex;
+   background-color: transparent;
+   border-style: none;
+   padding: 8 12px;
+   color: #fbd000;
+   text-overflow: ellipsis;
+   overflow:hidden;
+   white-space: nowrap;
+   outline: none;
+   flex: 1;
+   appearance: none;
 }
 
-.search-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.search-input:focus {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    outline: none;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
- 
  .header_login .subscribe {
     color: #a7a7a7;
     font-size: 16px;
@@ -163,4 +137,163 @@
     color:#fff;
     font-size: 24px;
     font-weight: 700;
+ }
+
+ .offer_scroll-container {
+   max-height: 43vh;
+   margin: 24px;
+   overflow-y: auto;
+   width: 100%;
+ }
+ 
+ .offer_scroll-container::-webkit-scrollbar {
+   width: 1px;
+ }
+ 
+ .offer_scroll-container::-webkit-scrollbar-thumb {
+   background-color: transparent;
+ }
+
+ .offer_list {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(300px, 1fr));
+   gap: 16px;
+   justify-items: center;
+   width: 100%;
+}
+
+.offer_list > section {
+   width: auto;
+   display: contents;
+}
+
+ .cards {
+   position: relative; 
+   width: 300px;
+   height: 100%;
+   overflow: hidden;
+   border-radius: 15px;
+ }
+
+ .cards img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+.cards span {
+   padding: 16px;
+   position: absolute;
+   color: #fff;
+   font-size: 24px;
+   font-weight: 700;
+ }
+
+ .artist {
+   --column-count: 5;
+   --grid-gap: 24px;
+   --min-container-width: 372px;
+ }
+ 
+ .hidden {
+   display: none;
+ }
+ 
+ .grid-container {
+   grid-gap:24px;
+   display: grid;
+   grid-template-columns: repeat(5, minmax(0, 1fr));
+   min-width: 767px;
+ }
+ 
+ .artist-card {
+   background: #181818;
+   border-radius: 8px;
+   -ms-flex: 1;
+   flex: 1;
+   isolation: isolate;
+   padding: 16px;
+   position: relative;
+   transition: background-color 0.3s ease;
+   width: 100%;
+ }
+ 
+ .artist-card:hover {
+   background-color: #252525;
+ }
+ 
+ .card-img {
+   padding-bottom: 100%;
+   position: relative;
+   width: 100%;
+   margin-bottom: 16px;
+ }
+ 
+ #artist-img {
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   border-radius: 50%;
+ }
+ 
+ .card-text {
+   display: flex;
+   flex-direction: column;
+   color: #fff;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   min-height: 62px;
+ }
+ 
+ .card-text a {
+   display: inline-block;
+   max-width: 100%;
+   vertical-align: middle;
+ }
+ 
+ #artist-name {
+   box-sizing: border-box;
+   margin-block: 0px;
+   font-size: 16px;
+   font-weight: 700;
+   padding-block-end: 8px;
+ }
+ 
+ .artist-categorie {
+   color: #6a6a6a;
+   font-weight: 400;
+   font-size: 0.875rem;
+ }
+ 
+ .play {
+   position: relative;
+ }
+ 
+ .play .fa-play {
+   position: absolute;
+   right: 10px;
+   top: 120px;
+   padding: 18px;
+   background-color: #1db954;
+   border-radius: 100%;
+   font-size: 14px;
+   opacity: 0;
+   transition: all ease 0.4s;
+ }
+ 
+ .artist-card:hover .play .fa-play {
+   opacity: 1;
+   transform: translateY(-20px);
+ }
+ 
+ .play .fa-play:hover {
+   padding: 20px;
+   cursor: pointer;
+ }
+ 
+ #result-artist {
+   padding: 20px 40px;
  }
