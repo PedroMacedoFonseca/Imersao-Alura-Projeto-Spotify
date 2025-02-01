@@ -189,7 +189,7 @@
    font-weight: 700;
  }
 
- .artist {
+ .artists {
    --column-count: 5;
    --grid-gap: 24px;
    --min-container-width: 372px;
